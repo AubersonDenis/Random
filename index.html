@@ -8,26 +8,68 @@
 </head>
 <body>
 
+
+    <!-- SEARCH ////////////////////////////////////////////////////////////////// -->
+    <input type="text" id="searchInput" placeholder="search…" autofocus>
+    <script>
+    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        const query = this.value.trim();
+        if (query) {
+        const googleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+        window.open(googleUrl, '_blank');
+        }
+    }
+    });
+    </script>
+    <style>
+    #searchInput{
+    margin: 2rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    opacity: 0.3;
+    }
+    </style>
+    <!-- END SEARCH /////////////////////// -->
+
+
+
+
+
+
+
     <div id="Card">
         <h1 id="strategy">Hello</h1>
     </div>
     <button onclick="window.location.reload();">⌘R</button>
-
+   
     <script>
+
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const query = this.value.trim();
+            if (query) {
+            const googleUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            window.open(googleUrl, '_blank');
+            }
+        }
+        });
+
        var strategy = document.getElementById("strategy");
 
 
-            const Strategies = [
-    "Courage !",
-    "N'évite pas ce qui est facile",
-    "Enlève une restriction",
-    "C'est simplement qu'une question de travail",
-    "Fait une pause",
-    "Aie confiance en le toi de maintenant",
-    "Passe une bonne journée",
-    "Utilise tes propres idées",
+        const Strategies = [
+            "Courage !",
+            "N'évite pas ce qui est facile",
+            "Enlève une restriction",
+            "C'est simplement qu'une question de travail",
+            "Fait une pause",
+            "Aie confiance en le toi de maintenant",
+            "Passe une bonne journée",
+            "Utilise tes propres idées",
 
- 
+        
         ];
 
         let total = Strategies.length;
