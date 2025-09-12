@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-body { font-family: sans-serif;}
-    </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="strategy">Hello</h1>
+
+    <div id="Card">
+        <h1 id="strategy">Hello</h1>
+    </div>
+    <button onclick="window.location.reload();">⌘R</button>
 
     <script>
        var strategy = document.getElementById("strategy");
-       strategy.innerHTML = "WTF?";
 
-        const Strategies = [
-            "chaton",
-            "Loutre",
-            "Canard"
+
+            const Strategies = [
+    "Courage !;",
+    "N'évite pas ce qui est facile;",
+    "Enlève une restriction;",
+    "C'est simplement qu'une question de travail;",
+    "Fait une pause;",
+    "Aie confiance en le toi de maintenant;",
+    "Utilise tes propres idées;"
+
+ 
         ];
 
-        let Liste = Strategies.length;
+        let total = Strategies.length;
         let rando = Math.random();
-        let hasar = rando * Liste;
+        let hasar = rando * total;
         let choix = Math.floor(hasar);
 
         strategy.innerHTML = Strategies[ choix];
