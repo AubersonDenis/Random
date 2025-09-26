@@ -21,11 +21,11 @@ body {
 
 #Card {
     width: 20rem;
-    aspect-ratio: 1.4;
+    /* aspect-ratio: 1.4; */
     border-radius: 0.6rem;
     padding: 1rem;
 
-    background-color: white;
+    background-color: rgb(156, 153, 153);
     border: 1px solid #7774;
     box-shadow: 2rem 2rem 2rem #0003;
 
